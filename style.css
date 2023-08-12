@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+}
+html,body{
+   height: 100%;
+   width:100%;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(238,174,202);
+    background: -moz-linear-gradient(99deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: -webkit-linear-gradient(99deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: linear-gradient(99deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+}
+.panel{
+    width: calc(100% - 20%);
+    height: calc(100% - 20%);
+    background-color: rgb(247, 235, 253);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.elem{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+   
+}
+.elem h2{
+    font-weight: 500;
+    font-size: 18px;
+}
+.ptop{
+    display: flex;
+    padding: 0px 30%;
+    color: rebeccapurple;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 90px;
+    background-color:rgba(148,187,233,1);
+}
+.box{
+    color: black;
+    font-weight: 400;
+    font-size: 22px;
+padding: 10px 20px;
+background-color: #fff;
+border-radius: 5px;
+}
+.pbottom{
+    width: 100%;
+    height: calc(100% - 100px);
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.bubble{
+    width: 60px;
+    height: 60px;
+    font-weight: 40px;
+    background-color: rgba(148,187,233,1);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bubble:hover{
+    background-color: rebeccapurple;
+    cursor: pointer;
+}
+/* Media Queries */
+
+/* For smartphones */
+@media (max-width: 480px) {
+    .panel {
+        border-radius: 0; /* No border radius for smartphones */
+    }
+}
+
+/* For laptops and desktops */
+@media (min-width: 768px) {
+    .elem {
+        gap: 15px;
+    }
+    
+    .ptop {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .bubble {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
+@media (max-width: 767px) {
+    .panel {
+        border-radius: 0; /* No border radius for smartphones */
+    }
+    
+    .elem {
+        gap: 15px;
+    }
+    
+    .ptop {
+        align-items: center;
+        padding: 0px;
+    }
+    
+    .bubble {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+}
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+    .elem {
+        gap: 20px;
+    }
+    
+    .ptop {
+        padding: 0 15%; /* Adjust padding for better responsiveness */
+    }
+    
+    .bubble {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+    }
+}
